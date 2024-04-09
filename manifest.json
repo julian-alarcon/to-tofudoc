@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "To OpenTofu Docs",
+  "version": "1.0",
+  "description": "Redirects HashiCorp Terraform documentation to OpenTofu",
+  "icons": {
+    "48": "icon.png",
+    "96": "icon2x.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://developer.hashicorp.com/*"
+      ],
+      "js": ["content.js"]
+    }
+  ],
+  "host_permissions": [
+    "https://developer.hashicorp.com/*"
+  ]
+}
